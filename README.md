@@ -10,7 +10,8 @@ npm run dev
 
 2nd step:
 in \Password-Manager\backend> open "server.js"
-open new terminal and write..
+open new terminal and write...
+cd .\backend\ (navigate to the current directory)
 npm start
 (it will show
 backend@1.0.0 start
