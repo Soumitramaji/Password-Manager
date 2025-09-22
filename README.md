@@ -1,12 +1,18 @@
-# React + Vite
+A responsive password manager built with React, Tailwind, MongoDB, and Express. Users can add, edit, delete, and copy credentials, and save them securely to a MongoDB database. Features include password visibility toggle, toast alerts, and mobile-friendly design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---how to run---
 
-Currently, two official plugins are available:
+1st step:
+in \Password-Manager\ folder open "App.jsx"
+open new terminal and write...
+npm run dev
+(it will show http://localhost:5173/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2nd step:
+in \Password-Manager\backend> open "server.js"
+open new terminal and write..
+npm start
+(it will show
+backend@1.0.0 start
+Connected successfully to MongoDB
+Server running at http://localhost:3000 )
