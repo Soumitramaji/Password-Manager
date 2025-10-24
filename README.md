@@ -3,7 +3,7 @@ A responsive password manager built with React, Tailwind, MongoDB, and Express. 
 ---how to run---
 
 1st step:
-in \Password-Manager\ folder open "App.jsx"
+in \Password-Manager\ src open "App.jsx"
 open new terminal and write...
 npm run dev
 (it will show http://localhost:5173/)
