@@ -21,7 +21,7 @@ A responsive password manager built with React and Tailwind CSS with CRUD, copy-
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/passop.git
+git clone (https://github.com/Soumitramaji/Password-Manager.git)
 
 📸 Screenshots -
 
