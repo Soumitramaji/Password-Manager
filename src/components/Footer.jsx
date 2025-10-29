@@ -1,11 +1,9 @@
-import React from 'react'
-
 const Footer = () => {
   return (
     <div className='bg-slate-700 text-white fixed bottom-0 w-full px-6 py-3'>
       <div className='flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0'>
 
-        {/* Left Side: Privacy, Terms, Contact */}
+        {/* Left Side Privacy, Terms, Contact */}
         <div className="flex flex-col sm:items-start items-center text-sm text-gray-300 text-center sm:text-left">
           <div className="flex gap-4 mb-1">
             <a href="/privacy" className="hover:text-green-600">Privacy</a>
@@ -15,7 +13,7 @@ const Footer = () => {
           <div>© 2025 Soumitra. All rights reserved.</div>
         </div>
 
-        {/* Center: Logo and "Created with ❤️ by Soumitra" */}
+        {/* Center Logo and "Created with love by Soumitra" */}
         <div className='flex flex-col items-center text-white font-bold text-center'>
           <div className="logo text-xl sm:text-2xl">
             <span className='text-green-700'>&lt;</span>
@@ -29,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Side: Social Media Icons */}
+        {/* Right Side Social Media Icons */}
         <div className="flex gap-4 sm:gap-5 items-center justify-center">
           <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
             <img src="icons/twitter.svg" alt="Twitter" className="w-5 h-5 sm:w-6 sm:h-6" />
