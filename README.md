@@ -28,41 +28,32 @@ git clone https://github.com/yourusername/passop.git
 **Home Page**  
 ![Home](Screenshots/home.png)
 
-**Generate Page 1**  
-![Generate](Screenshots/generate1.png)
-
-**Generate Page 2**  
-![Generate](Screenshots/generate2.png)
-
-**Generate Page 3**  
-![Generate](Screenshots/generate3.png)
-
-**User Handle Page**  
-![Handle](Screenshots/handle.png)
-
 
 🚀 Getting Started -
 
-Follow these steps to run BitTree locally:
+Follow these steps to run PassOP locally:
 
 1. Clone the repository
 
 git clone (https://github.com/Soumitramaji/BitTree-Store-Link.git)
 
-2. Install dependencies
-
-npm install
-or
-yarn install
-
-3. Set up environment variables
-
-MONGODB_URI=mongodb://localhost:27017/
-
-NEXT_PUBLIC_HOST=http://localhost:3000
-
-4. Run the development server
+2. Open the folder in vs code
 
 npm run dev
 or
 yarn dev
+
+http://localhost:5173/
+click on the link to open the application
+
+3. Navigate to backend folder
+cd ./backend
+
+4. open new terminl
+
+npm start
+or
+yarn start
+
+Server running at http://localhost:3000
+click on the link to connect with your mongodb server
