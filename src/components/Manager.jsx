@@ -7,16 +7,19 @@ const API_URL = "http://localhost:3000/"
 const Manager = () => {
     const [form, setForm] = useState({ site: "", username: "", password: "", _id: null })
     const [passwordArray, setPasswordArray] = useState([])
-    const [showPassword, setShowPassword] = useState(false);
+    const [visiblePasswords, setVisiblePasswords] = useState({})
     const [showAllPasswords, setShowAllPasswords] = useState(false);
-
-    const togglePasswordVisibility = () => {
-        setShowPassword(prev => !prev);
-    };
 
     const toggleShowAllPasswords = () => {
         setShowAllPasswords(prev => !prev);
     }
+
+    const togglePasswordVisibility = (id) => {
+        setVisiblePasswords(prev => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
     // Fetch all passwords
     const getPasswords = async () => {
@@ -146,27 +149,16 @@ const Manager = () => {
                             name="username"
                             id="username"
                         />
-                        <div className="relative">
+                        <div className="relative w-full">
                             <input
                                 value={form.password}
                                 onChange={handleChange}
                                 placeholder='Enter Password'
                                 className='rounded-full border border-green-500 w-full p-4 py-1 bg-white dark:bg-gray-700 dark:text-white'
-                                type={showPassword ? "text" : "password"}
+                                type="password"
                                 name="password"
                                 id="password"
                             />
-                            <span
-                                className="absolute right-2 top-2 cursor-pointer"
-                                onClick={togglePasswordVisibility}
-                            >
-                                <img
-                                    className='p-1'
-                                    width={25}
-                                    src={showPassword ? "icons/eye.png" : "icons/eyecross.png"}
-                                    alt={showPassword ? "Hide password" : "Show password"}
-                                />
-                            </span>
                         </div>
                     </div>
 
@@ -234,7 +226,14 @@ const Manager = () => {
                                                 </td>
                                                 <td className='py-2 border border-white text-center'>
                                                     <div className='flex items-center justify-center'>
-                                                        {"*".repeat(item.password.length)}
+                                                        {visiblePasswords[item._id] ? item.password : "*".repeat(item.password.length)}
+                                                        <img
+                                                            className='cursor-pointer m-4'
+                                                            onClick={() => togglePasswordVisibility(item._id)}
+                                                            width={25}
+                                                            src={visiblePasswords[item._id] ? "icons/eye.png" : "icons/eyecross.png"}
+                                                            alt={visiblePasswords[item._id] ? "Hide password" : "Show password"}
+                                                        />
                                                         <img
                                                             className='cursor-pointer m-4'
                                                             onClick={() => copyText(item.password)}
